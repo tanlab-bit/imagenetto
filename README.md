@@ -29,7 +29,7 @@ I personally needed a dataset that can be used for multiple computer vision task
 * Semantic (Instance) segmentation.
 * _(and maybe)_ Image captioning.
 
-Although there exists larger "all-in-one", "multi-purpose" datasets like the [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html), but I just wanted a small scale dataset to quickly validate my ideas and algorithms (much like the purpose of the [imagenette dataset](https://github.com/fastai/imagenette)). Hence, I present the `imagenet-all-rounder`!
+Although there exists larger "all-in-one", "multi-purpose" datasets like the [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html), but I just wanted a small scale dataset to quickly validate my ideas and algorithms (much like the purpose of the [imagenette dataset](https://github.com/fastai/imagenette)). Also, class labels in the *Imagenette* dataset doesn't comply with other common pretrained detection, segmentation, and captioning models (because they are most often trained with COCO or Pascal VOC datasets). Hence, I present the `imagenet-all-rounder`!
 
 ## Specifications
 
@@ -45,9 +45,13 @@ Although there exists larger "all-in-one", "multi-purpose" datasets like the [Op
 
 Special shout-out to the creator of [ImageNet Downloader](https://github.com/mf1024/ImageNet-Datasets-Downloader), [jfilter/split-folders](https://github.com/jfilter/split-folders), and of course, [fastai/imagenette](https://github.com/fastai/imagenette).
 
+## Behind the scenes
+
+* See: [Behind the scenes.](./behind-the-scenes.md)
+
 ---
 
-🍻 `imagenet-all-rounder` © Spencer Woo. Released under the [MIT License](https://github.com/spencerwooo/portfolio/blob/master/LICENSE).
+🍻 **`imagenet-all-rounder`** © Spencer Woo. Released under the [MIT License](https://github.com/spencerwooo/portfolio/blob/master/LICENSE).
 
 Authored and maintained by Spencer Woo.
 
