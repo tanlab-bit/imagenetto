@@ -1,6 +1,10 @@
 # imagenet-all-rounder
 
-> 🍻 Small scale multi-purpose image dataset (ImageNet subset) for image classification, object detection, semantic segmentation (and maybe image captioning).
+> all · rounder /ˌɔːlˈraʊndə/
+>
+> * a versatile person or thing.
+
+`imagenet-all-rounder` is a small scale subset of 10 carefully chosen classes from [ImageNet](http://www.image-net.org/) containing ~3000 images.
 
 ## Quick usage
 
@@ -18,12 +22,12 @@ load the dataset
 
 ## Why this dataset?
 
-I personally needed a dataset that shares multiple purposes including:
+I personally needed a dataset that can be used for multiple computer vision tasks including:
 
-* Image classification (of course)
-* Object detection
-* Semantic (Instance) segmentation
-* (And maybe) Image captioning
+* Image classification (of course).
+* Object detection.
+* Semantic (Instance) segmentation.
+* _(and maybe)_ Image captioning.
 
 Although there exists larger "all-in-one", "multi-purpose" datasets like the [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html), but I just wanted a small scale dataset to quickly validate my ideas and algorithms (much like the purpose of the [imagenette dataset](https://github.com/fastai/imagenette)). Hence, I present the `imagenet-all-rounder`!
 
@@ -31,13 +35,15 @@ Although there exists larger "all-in-one", "multi-purpose" datasets like the [Op
 
 ### Structure
 
-### Classification labels to detector/segmentation labels
+### Labels
 
 ### Training / Validation
 
+80%/20% train/validation split.
+
 ## Thanks
 
-Special shout out to the creator of [ImageNet Downloader](https://github.com/mf1024/ImageNet-Datasets-Downloader), [jfilter/split-folders](https://github.com/jfilter/split-folders), and of course, [fastai/imagenette](https://github.com/fastai/imagenette).
+Special shout-out to the creator of [ImageNet Downloader](https://github.com/mf1024/ImageNet-Datasets-Downloader), [jfilter/split-folders](https://github.com/jfilter/split-folders), and of course, [fastai/imagenette](https://github.com/fastai/imagenette).
 
 ---
 
