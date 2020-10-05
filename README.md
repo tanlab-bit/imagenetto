@@ -41,15 +41,19 @@ Although there exists larger "all-in-one", "multi-purpose" datasets like the [Op
 
 80%/20% train/validation split.
 
-## Thanks
+## Caveats
 
-Special shout-out to the creator of [ImageNet Downloader](https://github.com/mf1024/ImageNet-Datasets-Downloader), [jfilter/split-folders](https://github.com/jfilter/split-folders), and of course, [fastai/imagenette](https://github.com/fastai/imagenette).
+No bounding-box labels available yet. Can't train detectors and such on this dataset, only pretrained models work.
 
 ## Behind the scenes
 
 * See: [Behind the scenes.](./behind-the-scenes.md)
 
----
+## Thanks
+
+Special shout-out to the creator of [ImageNet Downloader](https://github.com/mf1024/ImageNet-Datasets-Downloader), [jfilter/split-folders](https://github.com/jfilter/split-folders), and of course, [fastai/imagenette](https://github.com/fastai/imagenette).
+
+--
 
 🍻 **`imagenet-all-rounder`** © Spencer Woo. Released under the [MIT License](https://github.com/spencerwooo/portfolio/blob/master/LICENSE).
 
