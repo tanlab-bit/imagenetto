@@ -4,7 +4,7 @@
 >
 > * a versatile person or thing.
 
-`imagenet-all-rounder` is a small scale subset of 10 carefully chosen classes from [ImageNet](http://www.image-net.org/) containing ~3000 images.
+`imagenet-all-rounder` is a small scale subset of 10 carefully chosen classes from [ImageNet](http://www.image-net.org/) containing ~3000 training and validation images.
 
 ## Quick usage
 
@@ -14,10 +14,55 @@ You can download the dataset (which contains 10 classes, each with ~300 images) 
 
 ### Using the dataset
 
-You can load the dataset with PyTorch.
+You can load the dataset with PyTorch and torchvision.
 
 ```python
-load the dataset
+import os
+import torch
+import torchvision
+from torchvision.transforms import transforms
+
+# The root folder of the imagenet-all-rounder dataset
+dataset_root = "./imagenet_all_rounder"
+
+# Define a transform with random cropping and normalization
+transform = {
+    "train": transforms.Compose(
+        [
+            transforms.RandomResizedCrop(244),
+            transforms.RandomHorizontalFlip(),
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
+        ]
+    ),
+    "val": transforms.Compose(
+        [
+            transforms.Resize(256),
+            transforms.CenterCrop(244),
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
+        ]
+    ),
+}
+
+# Load the dataset with torchvision ImageFolder
+image_datasets = {
+    x: torchvision.datasets.ImageFolder(
+        root=os.path.join(dataset_root, x), transform=transform[x]
+    )
+    for x in ["train", "val"]
+}
+# Create a dataloader iterative
+data_loaders = {
+    x: torch.utils.data.DataLoader(
+        image_datasets[x], batch_size=4, shuffle=True
+    )
+    for x in ["train", "val"]
+}
+# Calculate the size of each split of the dataset
+data_sizes = {x: len(image_datasets[x]) for x in ["train", "val"]}
+
+...
 ```
 
 ## Why this dataset?
@@ -26,7 +71,7 @@ I personally needed a dataset that can be used for multiple computer vision task
 
 * Image classification (of course).
 * Object detection.
-* Semantic (Instance) segmentation.
+* Semantic segmentation.
 * _(and maybe)_ Image captioning.
 
 Although there exists larger _all-in-one_, _multi-purpose_ datasets like the [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html), but I just wanted a small scale dataset to quickly validate my ideas and algorithms (much like the purpose of the [imagenette dataset](https://github.com/fastai/imagenette)). Also, class labels in the *Imagenette* dataset doesn't comply with other common pretrained detection, segmentation, and captioning models (because they are most often trained with COCO or Pascal VOC datasets). Hence, I present the `imagenet-all-rounder`!
