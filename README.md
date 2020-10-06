@@ -1,4 +1,4 @@
-# imagenet-all-rounder
+<h1>imagenet-all-rounder</h1>
 
 > all · rounder /ˌɔːlˈraʊndə/
 >
@@ -6,11 +6,28 @@
 
 `imagenet-all-rounder` is a small scale subset of 10 carefully chosen classes from [ImageNet](http://www.image-net.org/) containing ~3000 training and validation images.
 
+<h2>Table of contents</h2>
+
+- [Quick usage](#quick-usage)
+  - [Download](#download)
+  - [Demo](#demo)
+  - [Using the dataset](#using-the-dataset)
+- [Why this dataset?](#why-this-dataset)
+- [Specifications](#specifications)
+  - [Structure](#structure)
+  - [Labels](#labels)
+  - [Training / Validation](#training--validation)
+- [Caveats](#caveats)
+- [Behind the scenes](#behind-the-scenes)
+- [Thanks](#thanks)
+
 ## Quick usage
 
 ### Download
 
 You can download the dataset (which contains 10 classes, each with ~300 images) from: [GitHub Release - imagenet_all_rounder.zip](https://github.com/spencerwooo/imagenet-all-rounder/releases/latest).
+
+### Demo
 
 ### Using the dataset
 
@@ -121,7 +138,7 @@ This dataset has a **80%/20% train/validation** split.
 
 ## Caveats
 
-There's no bounding-box annotations available yet, which means that you won't be able to train detectors and such on this dataset. The purpose of this dataset is more of a evaluation dataset rather than a training dataset.
+There's no bounding-box annotations available yet, which means that you won't be able to train detectors and such on this dataset. The purpose of this dataset is more of an evaluation dataset rather than a training dataset.
 
 ## Behind the scenes
 
