@@ -80,15 +80,48 @@ Although there exists larger _all-in-one_, _multi-purpose_ datasets like the [Op
 
 ### Structure
 
+```
+imagenet_all_rounder
+├── train
+│   ├── Eskimo dog
+│   │   └── xxx.png ...
+│   ├── Persian cat
+│   ├── airliner
+│   ├── bullet train
+│   ├── folding chair
+│   ├── hummingbird
+│   ├── monitor
+│   ├── school bus
+│   ├── speedboat
+│   └── studio couch
+└── val
+    └── ...
+```
+
 ### Labels
+
+| Index | ImageNet Classes | ImageNet Labels | VOC Labels |
+| :---- | :--------------- | :-------------- | :--------- |
+| 1     | n02109961        | Eskimo dog      | dog        |
+| 2     | n02123394        | Persian cat     | cat        |
+| 3     | n02690373        | airliner        | aeroplane  |
+| 4     | n02917067        | bullet train    | train      |
+| 5     | n03376595        | folding chair   | chair      |
+| 6     | n01833805        | hummingbird     | bird       |
+| 7     | n03782006        | monitor         | tvmonitor  |
+| 8     | n04146614        | school bus      | bus        |
+| 9     | n04273569        | speedboat       | boat       |
+| 10    | n04344873        | studio couch    | sofa       |
+
+> Reference ImageNet class - label list: [aaronpolhamus/map_clsloc.txt](https://gist.github.com/aaronpolhamus/964a4411c0906315deb9f4a3723aac57).
 
 ### Training / Validation
 
-80%/20% train/validation split.
+This dataset has a **80%/20% train/validation** split.
 
 ## Caveats
 
-No bounding-box labels available yet. Can't train detectors and such on this dataset, only pretrained models work.
+There's no bounding-box annotations available yet, which means that you won't be able to train detectors and such on this dataset. The purpose of this dataset is more of a evaluation dataset rather than a training dataset.
 
 ## Behind the scenes
 
