@@ -4,7 +4,7 @@
 >
 > * a versatile person or thing.
 
-`imagenet-all-rounder` is a small scale subset of 10 carefully chosen classes from [ImageNet](http://www.image-net.org/) containing ~3000 training and validation images.
+`imagenet-all-rounder` is a small scale subset of 10 carefully chosen classes from [ImageNet](http://www.image-net.org/) containing ~3,000 training and validation images.
 
 <h2>Table of contents</h2>
 
@@ -91,7 +91,7 @@ I personally needed a dataset that can be used for multiple computer vision task
 * Semantic segmentation.
 * _(and maybe)_ Image captioning.
 
-Although there exists larger _all-in-one_, _multi-purpose_ datasets like the [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html), but I just wanted a small scale dataset to quickly validate my ideas and algorithms (much like the purpose of the [imagenette dataset](https://github.com/fastai/imagenette)). Also, class labels in the *Imagenette* dataset doesn't comply with other common pretrained detection, segmentation, and captioning models (because they are most often trained with COCO or Pascal VOC datasets). Hence, I present the `imagenet-all-rounder`!
+Although there exists larger _all-in-one_, _multi-purpose_ datasets like the [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html), I just wanted a small scale dataset to quickly validate my ideas and algorithms (much like the purpose of the [imagenette dataset](https://github.com/fastai/imagenette)). Also, class labels in the *Imagenette* dataset doesn't comply with other common pretrained detection, segmentation, and captioning models (because they are most often trained with COCO or Pascal VOC datasets). Hence, I present the `imagenet-all-rounder`!
 
 ## Specifications
 
