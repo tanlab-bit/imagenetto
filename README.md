@@ -29,6 +29,8 @@ You can download the dataset (which contains 10 classes, each with ~300 images) 
 
 ### Demo
 
+![demo](./images/demo.png)
+
 ### Using the dataset
 
 You can load the dataset with PyTorch and torchvision.
