@@ -25,7 +25,10 @@
 
 ### Download
 
-You can download the dataset (which contains 10 classes, each with ~300 images) from: [GitHub Release - imagenet_all_rounder.zip](https://github.com/spencerwooo/imagenet-all-rounder/releases/latest).
+You can download the dataset (which contains 10 classes, each with ~300 images) from: [GitHub Release - imagenet_all_rounder](https://github.com/spencerwooo/imagenet-all-rounder/releases/latest).
+
+* `imagenet_all_rounder.tar.gz` contains gzipped files of this dataset with a 80/20 train/val split ratio.
+* `imagenet_all_rounder_no_split.tar.gz` contains gzipped files of the non-split version of this dataset.
 
 ### Demo
 
