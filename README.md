@@ -1,21 +1,20 @@
 # Imagenetto
 
-`imagenetto` is a small scale subset of 10 carefully chosen classes from
-[ImageNet](http://www.image-net.org/) containing ~3,000 training and
+`imagenetto` is several small scale subset of 10 carefully chosen classes from
+[ImageNet](http://www.image-net.org/) containing 3,000~5,000 training and
 validation images.
 
 ## Quick usage
 
 ### Download
 
-You can download the dataset (which contains 10 classes, each with ~300 images)
-from: [GitHub Release -
-imagenet_all_rounder](https://github.com/spencerwooo/imagenet-all-rounder/releases/latest).
+You can download the dataset here: [GitHub Release -
+Imagenetto](https://github.com/daisylab-bit/imagenetto/releases/releases/latest).
 
-* `imagenet_all_rounder.tar.gz` contains gzipped files of this dataset with a
-  80/20 train/val split ratio.
-* `imagenet_all_rounder_no_split.tar.gz` contains gzipped files of the non-split
-  version of this dataset.
+* `imagenetto_*.tar.gz` contains gzipped files of this dataset with a 80/20
+  train/val split ratio.
+* `imagenetto_*_no_split.tar.gz` contains gzipped files of the non-split version
+  of this dataset.
 
 ### Demo
 
@@ -31,8 +30,8 @@ import torch
 import torchvision
 from torchvision.transforms import transforms
 
-# The root folder of the imagenet-all-rounder dataset
-dataset_root = "./imagenet_all_rounder"
+# The root folder of the imagenetto dataset
+dataset_root = "./imagenetto_a"
 
 # Define a transform with random cropping and normalization
 transform = {
@@ -74,48 +73,15 @@ data_sizes = {x: len(image_datasets[x]) for x in ["train", "val"]}
 ...
 ```
 
-## Why this dataset?
-
-I personally needed a dataset that can be used for multiple computer vision
-tasks including:
-
-* Image classification (of course).
-* Object detection.
-* Semantic segmentation.
-* _(and maybe)_ Image captioning.
-
-Although there exists larger _all-in-one_, _multi-purpose_ datasets like the
-[Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html),
-I just wanted a small scale dataset to quickly validate my ideas and algorithms
-(much like the purpose of the [imagenette
-dataset](https://github.com/fastai/imagenette)). Also, class labels in the
-_Imagenette_ dataset doesn't comply with other common pretrained detection,
-segmentation, and captioning models (because they are most often trained with
-COCO or Pascal VOC datasets). Hence, I present the `imagenet-all-rounder`!
-
 ## Specifications
 
-### Structure
-
-```text
-imagenet_all_rounder
-├── train
-│   ├── Eskimo dog
-│   │   └── xxx.png ...
-│   ├── Persian cat
-│   ├── airliner
-│   ├── bullet train
-│   ├── folding chair
-│   ├── hummingbird
-│   ├── monitor
-│   ├── school bus
-│   ├── speedboat
-│   └── studio couch
-└── val
-    └── ...
-```
-
 ### Labels
+
+If you are using this dataset for tasks other than classification, use
+ImagenettoA, as it has some shared labels with the VOC dataset. Otherwise, use
+ImagenettoB.
+
+#### ImagenettoA
 
 | Index | ImageNet Classes | ImageNet Labels | VOC Labels |
 | :---- | :--------------- | :-------------- | :--------- |
@@ -129,6 +95,21 @@ imagenet_all_rounder
 | 8     | n04146614        | school bus      | bus        |
 | 9     | n04273569        | speedboat       | boat       |
 | 10    | n04344873        | studio couch    | sofa       |
+
+#### ImagenettoB
+
+| Index | ImageNet Classes | ImageNet Labels    |
+| :---- | :--------------- | :----------------- |
+| 1     | n02092002        | Scottish deerhound |
+| 2     | n02134084        | assault rifle      |
+| 3     | n07745940        | bakery             |
+| 4     | n04389033        | espresso           |
+| 5     | n04252077        | ice bear           |
+| 6     | n04579432        | ski                |
+| 7     | n02749479        | snowmobile         |
+| 8     | n04228054        | strawberry         |
+| 9     | n02776631        | tank               |
+| 10    | n07920052        | whistle            |
 
 > Reference ImageNet class - label list:
 > [aaronpolhamus/map_clsloc.txt](https://gist.github.com/aaronpolhamus/964a4411c0906315deb9f4a3723aac57).
