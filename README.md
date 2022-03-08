@@ -1,4 +1,4 @@
-# Imagenetto
+# 💮 Imagenetto
 
 `imagenetto` is several small scale subset of 10 carefully chosen classes from
 [ImageNet](http://www.image-net.org/) containing 3,000~5,000 training and
@@ -9,7 +9,7 @@ validation images.
 ### Download
 
 You can download the dataset here: [GitHub Release -
-Imagenetto](https://github.com/daisylab-bit/imagenetto/releases/releases/latest).
+Imagenetto](https://github.com/daisylab-bit/imagenetto/releases/latest).
 
 * `imagenetto_*.tar.gz` contains gzipped files of this dataset with a 80/20
   train/val split ratio.
