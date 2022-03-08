@@ -1,34 +1,21 @@
-<h1>imagenet-all-rounder</h1>
+# Imagenetto
 
-> all · rounder /ˌɔːlˈraʊndə/
->
-> * a versatile person or thing.
-
-`imagenet-all-rounder` is a small scale subset of 10 carefully chosen classes from [ImageNet](http://www.image-net.org/) containing ~3,000 training and validation images.
-
-<h2>Table of contents</h2>
-
-- [Quick usage](#quick-usage)
-  - [Download](#download)
-  - [Demo](#demo)
-  - [Using the dataset](#using-the-dataset)
-- [Why this dataset?](#why-this-dataset)
-- [Specifications](#specifications)
-  - [Structure](#structure)
-  - [Labels](#labels)
-  - [Training / Validation](#training--validation)
-- [Caveats](#caveats)
-- [Behind the scenes](#behind-the-scenes)
-- [Thanks](#thanks)
+`imagenetto` is a small scale subset of 10 carefully chosen classes from
+[ImageNet](http://www.image-net.org/) containing ~3,000 training and
+validation images.
 
 ## Quick usage
 
 ### Download
 
-You can download the dataset (which contains 10 classes, each with ~300 images) from: [GitHub Release - imagenet_all_rounder](https://github.com/spencerwooo/imagenet-all-rounder/releases/latest).
+You can download the dataset (which contains 10 classes, each with ~300 images)
+from: [GitHub Release -
+imagenet_all_rounder](https://github.com/spencerwooo/imagenet-all-rounder/releases/latest).
 
-* `imagenet_all_rounder.tar.gz` contains gzipped files of this dataset with a 80/20 train/val split ratio.
-* `imagenet_all_rounder_no_split.tar.gz` contains gzipped files of the non-split version of this dataset.
+* `imagenet_all_rounder.tar.gz` contains gzipped files of this dataset with a
+  80/20 train/val split ratio.
+* `imagenet_all_rounder_no_split.tar.gz` contains gzipped files of the non-split
+  version of this dataset.
 
 ### Demo
 
@@ -89,20 +76,28 @@ data_sizes = {x: len(image_datasets[x]) for x in ["train", "val"]}
 
 ## Why this dataset?
 
-I personally needed a dataset that can be used for multiple computer vision tasks including:
+I personally needed a dataset that can be used for multiple computer vision
+tasks including:
 
 * Image classification (of course).
 * Object detection.
 * Semantic segmentation.
 * _(and maybe)_ Image captioning.
 
-Although there exists larger _all-in-one_, _multi-purpose_ datasets like the [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html), I just wanted a small scale dataset to quickly validate my ideas and algorithms (much like the purpose of the [imagenette dataset](https://github.com/fastai/imagenette)). Also, class labels in the *Imagenette* dataset doesn't comply with other common pretrained detection, segmentation, and captioning models (because they are most often trained with COCO or Pascal VOC datasets). Hence, I present the `imagenet-all-rounder`!
+Although there exists larger _all-in-one_, _multi-purpose_ datasets like the
+[Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html),
+I just wanted a small scale dataset to quickly validate my ideas and algorithms
+(much like the purpose of the [imagenette
+dataset](https://github.com/fastai/imagenette)). Also, class labels in the
+_Imagenette_ dataset doesn't comply with other common pretrained detection,
+segmentation, and captioning models (because they are most often trained with
+COCO or Pascal VOC datasets). Hence, I present the `imagenet-all-rounder`!
 
 ## Specifications
 
 ### Structure
 
-```
+```text
 imagenet_all_rounder
 ├── train
 │   ├── Eskimo dog
@@ -143,7 +138,9 @@ This dataset has a **80%/20% train/validation** split.
 
 ## Caveats
 
-There's no bounding-box annotations available yet, which means that you won't be able to train detectors and such on this dataset. The purpose of this dataset is more of an evaluation dataset rather than a training dataset.
+There's no bounding-box annotations available yet, which means that you won't be
+able to train detectors and such on this dataset. The purpose of this dataset is
+more of an evaluation dataset rather than a training dataset.
 
 ## Behind the scenes
 
@@ -151,12 +148,10 @@ There's no bounding-box annotations available yet, which means that you won't be
 
 ## Thanks
 
-Special shout-out to the creators of [ImageNet Downloader](https://github.com/mf1024/ImageNet-Datasets-Downloader), [jfilter/split-folders](https://github.com/jfilter/split-folders), and of course, [fastai/imagenette](https://github.com/fastai/imagenette).
+* [ImageNet Downloader](https://github.com/mf1024/ImageNet-Datasets-Downloader)
+* [jfilter/split-folders](https://github.com/jfilter/split-folders)
+* [fastai/imagenette](https://github.com/fastai/imagenette)
 
----
+## License
 
-🍻 **`imagenet-all-rounder`** © Spencer Woo. Released under the [MIT License](https://github.com/spencerwooo/portfolio/blob/master/LICENSE).
-
-Authored and maintained by Spencer Woo.
-
-[@Portfolio](https://spencerwoo.com/) · [@GitHub](https://github.com/spencerwooo) · [@BIT](http://www.bit.edu.cn/)
+[MIT](LICENSE).
