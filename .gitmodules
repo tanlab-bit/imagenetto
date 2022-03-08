@@ -1,0 +1,3 @@
+[submodule "downloader"]
+	path = downloader
+	url = https://github.com/mf1024/ImageNet-Datasets-Downloader.git

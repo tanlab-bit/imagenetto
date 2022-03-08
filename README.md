@@ -130,7 +130,8 @@ imagenet_all_rounder
 | 9     | n04273569        | speedboat       | boat       |
 | 10    | n04344873        | studio couch    | sofa       |
 
-> Reference ImageNet class - label list: [aaronpolhamus/map_clsloc.txt](https://gist.github.com/aaronpolhamus/964a4411c0906315deb9f4a3723aac57).
+> Reference ImageNet class - label list:
+> [aaronpolhamus/map_clsloc.txt](https://gist.github.com/aaronpolhamus/964a4411c0906315deb9f4a3723aac57).
 
 ### Training / Validation
 
@@ -141,6 +142,12 @@ This dataset has a **80%/20% train/validation** split.
 There's no bounding-box annotations available yet, which means that you won't be
 able to train detectors and such on this dataset. The purpose of this dataset is
 more of an evaluation dataset rather than a training dataset.
+
+## Clone with submodule
+
+```bash
+git clone --recurse-submodules -j8 git@github.com:daisylab-bit/imagenetto.git
+```
 
 ## Behind the scenes
 
